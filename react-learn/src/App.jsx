@@ -4,13 +4,14 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Button from './components/Button'
 import Task from './components/Task'
 import Tasks from './components/Tasks'
+import Compteur from './components/Compteur' ;
 import React, {useState, useEffect} from 'react'
 
 function App() {
   //tasks est ce qui sera manipulé
   //setTasks permet de mettre à jour tasks
   //On met entre parenthèses dans le useState la valeur initiale
-  const [tasks, setTasks] = useState(() => {
+  /*const [tasks, setTasks] = useState(() => {
     // Essayer de récupérer les tâches depuis le localStorage
     const savedTasks = localStorage.getItem('tasks');
 
@@ -22,7 +23,7 @@ function App() {
     const index = tasks.length + 1;
     const id = Date.now();
     const name = `Nouvelle tâche ${index}`;
-    const task = { id: id, name: name };
+    const task = { id: id, name: name, checkState: false };
     //On ajoute à tasks la nouvelle task grâce à la syntaxe de décomposition
     const updatedTasks = [...tasks, task];
     setTasks(updatedTasks);
@@ -36,13 +37,14 @@ function App() {
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
   };
 
-  const editTask = (taskId, newName) => {
+  const editTask = (taskId, newName, check) => {
     const updatedTasks = tasks.map(task =>
       //Modification dynamique de task avec la syntaxe de décomposition
-      task.id === taskId ? { ...task, name: newName } : task
+      task.id === taskId ? { ...task, name: newName, checkState: check } : task
     );
     setTasks(updatedTasks);
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    console.log(updatedTasks)
   };
 
   return (
@@ -65,7 +67,13 @@ function App() {
       
     </div>
 
-  )
+  )*/
+
+  return (
+    <>
+    <Compteur />
+    </>
+    )
 }
 
 export default App
