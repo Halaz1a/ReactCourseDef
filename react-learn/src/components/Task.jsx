@@ -1,19 +1,25 @@
-import app from "../app.module.css"
+import "../App.css"
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import React, { useState } from 'react';
 
 function Task({ name, deleteTask, taskId, editTask, checkState }) {
 
+  useEffect(() => {
+    //Quand on appuie sur la checkbox, on inverse l'état de isChecked et on sauvegarde dans le local storage
+    const changeCheck = () => {
+      setIsChecked(!isChecked)
+      editTask(taskId, newName, isChecked);
+    }
+    return () => {
+      cleanInterval(interval)
+    }
+  }, [])
+
   //On récupère le checkState sauvegardé dans le localStorage
   const [isChecked, setIsChecked] = useState(checkState)
-  console.log(checkState)
 
-  //Quand on appuie sur la checkbox, on inverse l'état de isChecked et on sauvegarde dans le local storage
-  const changeCheck = () => {
-    setIsChecked(!isChecked)
-    editTask(taskId, newName, isChecked);
-  }
+
 
   //Par défaut pas en mode édition, donc le nom par défaut s'affiche
   const [isEditing, setEdit] = useState(false)
@@ -33,10 +39,10 @@ function Task({ name, deleteTask, taskId, editTask, checkState }) {
   //Sauvegarder le nom dans la tâche
   const save = () => {
     if (newName !== name) {
-        editTask(taskId, newName, isChecked); 
+      editTask(taskId, newName, isChecked);
     }
     //Désactiver le mode édition
-    setEdit(false);  
+    setEdit(false);
   };
 
   return (

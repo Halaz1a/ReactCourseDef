@@ -1,8 +1,62 @@
-.btn-red {
-    background-color: red;
-    color: white;
+h1 {
+    text-align: center;
 }
 
-.text-red {
-    color: red;
+.main {
+    background-color:#f8f9ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.buttons {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #ecedf6;
+    padding: 10px;
+}
+
+.add {
+    background-color: #626ff1;
+    color: white;
+    width: 85px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.filters {
+    background-color: #cccedf;
+    width: 85px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.task {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.informations {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.dark {
+    background-color: black;
 }

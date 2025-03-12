@@ -1,4 +1,4 @@
-import app from "../app.module.css"
+import "../App.css"
 import Task from './Task';
 
 function Tasks({tasks, deleteTask, editTask}) {

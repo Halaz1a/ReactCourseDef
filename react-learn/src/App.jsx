@@ -1,10 +1,10 @@
 import "./App.css"
-import app from "./app.module.css"
 import 'bootstrap/dist/css/bootstrap.css'
 import Button from './components/Button'
 import Task from './components/Task'
 import Tasks from './components/Tasks'
-import Compteur from './components/Compteur' ;
+import Compteur from './components/Compteur'
+import DarkModeSwitch from './components/DarkModeSwitch'
 import React, {useState, useEffect} from 'react'
 
 function App() {
@@ -69,11 +69,17 @@ function App() {
 
   )*/
 
-  return (
+  /*return (
     <>
     <Compteur />
     </>
-    )
+    )*/
+
+    return (
+      <>
+      <DarkModeSwitch />
+      </>
+      )
 }
 
 export default App
