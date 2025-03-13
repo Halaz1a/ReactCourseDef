@@ -5,9 +5,10 @@ import Plateau from './components/Plateau'
 function App() {
   const [croix, setCroix] = useState(true)
 
-  useEffect(() => {
+  //Fait bugger tout ce qui en découle
+  /*useEffect(() => {
     setCroix(!croix)
-  }, [croix]);
+  }, [croix]);*/
 
   const [count, setCount] = useState(5)
 
