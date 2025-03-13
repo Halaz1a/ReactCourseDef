@@ -11,14 +11,14 @@ function App() {
   //tasks est ce qui sera manipulé
   //setTasks permet de mettre à jour tasks
   //On met entre parenthèses dans le useState la valeur initiale
-  /*const [tasks, setTasks] = useState(() => {
+  const [tasks, setTasks] = useState(() => {
     // Essayer de récupérer les tâches depuis le localStorage
     const savedTasks = localStorage.getItem('tasks');
 
     //Si des tâches sont stockées, on les récupère, sinon on prend un tableau vide
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
-
+  
   const addTask = () => {
     const index = tasks.length + 1;
     const id = Date.now();
@@ -44,18 +44,17 @@ function App() {
     );
     setTasks(updatedTasks);
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-    console.log(updatedTasks)
   };
 
   return (
 
-    <div className={app.main}>
+    <div className="main">
       <h1>Liste des tâches à réaliser</h1>
 
-      <div className={app.buttons}>
+      <div className="buttons">
         <Button label="Ajouter" onClick={addTask}/>
 
-        <select className={app.filters}>
+        <select className="filters">
           <option value="all">Toutes</option>
           <option value="ongoing">En cours</option>
           <option value="finished">Terminées</option>
@@ -67,7 +66,7 @@ function App() {
       
     </div>
 
-  )*/
+  )
 
   /*return (
     <>
@@ -75,11 +74,11 @@ function App() {
     </>
     )*/
 
-    return (
+    /*return (
       <>
       <DarkModeSwitch />
       </>
-      )
+      )*/
 }
 
 export default App
