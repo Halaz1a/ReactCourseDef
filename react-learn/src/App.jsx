@@ -1,6 +1,7 @@
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.css'
 import Button from './components/Button'
+import PseudoForm from './components/PseudoForm'
 import Task from './components/Task'
 import Tasks from './components/Tasks'
 import Compteur from './components/Compteur'
@@ -11,7 +12,7 @@ function App() {
   //tasks est ce qui sera manipulé
   //setTasks permet de mettre à jour tasks
   //On met entre parenthèses dans le useState la valeur initiale
-  const [tasks, setTasks] = useState(() => {
+  /*const [tasks, setTasks] = useState(() => {
     // Essayer de récupérer les tâches depuis le localStorage
     const savedTasks = localStorage.getItem('tasks');
 
@@ -66,7 +67,13 @@ function App() {
       
     </div>
 
-  )
+  )*/
+
+  return (
+    <>
+    <PseudoForm />
+    </>
+    )
 
   /*return (
     <>
